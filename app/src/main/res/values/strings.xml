@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mole Seeker</string>
+    <string name="mole_seeker">Mole Seeker</string>
+    <string name="skip">SKIP</string>
+    <string name="by_kevin_san_gabriel">by Kevin San Gabriel</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="play_game">Play game!</string>
+    <string name="options">Options</string>
+    <string name="help">Help</string>
+    <string name="moleImg1">moleImg1</string>
+    <string name="moleImg3">moleImg3</string>
+</resources>

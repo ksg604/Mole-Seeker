@@ -5,13 +5,12 @@ import android.os.Bundle;
 
 import com.example.kevin.moleseeker.model.Game;
 
-public class MainMenuActivity extends AppCompatActivity {
-
+public class GameActivity extends AppCompatActivity {
     private Game game;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_game);
         game = Game.getInstance();
     }
 }

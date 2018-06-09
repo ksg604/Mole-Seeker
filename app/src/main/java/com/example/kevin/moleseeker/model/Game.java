@@ -1,12 +1,17 @@
 package com.example.kevin.moleseeker.model;
 
+
+import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+
+
 public class Game {
 
     private int numRows;
     private int numCols;
-    private int numMines;
+    private int numMoles;
     private int scansUsed;
-    private int[][] grid;
 
     /*Singleton model support
      * allows same game object to be shared between two activities
@@ -26,17 +31,34 @@ public class Game {
     /*
        Normal object support
      */
-    public int getNumMines(){
-        return numMines;
+    public int getNumMoles(){
+        return numMoles;
+    }
+    public int getNumCols(){
+        return numCols;
+    }
+    public int getNumRows(){
+        return numRows;
+    }
+    public int getScansUsed(){
+        return scansUsed;
+    }
+    public void useScan(){
+        scansUsed++;
+    }
+    public void moleFound(){
+        numMoles--;
     }
 
-    public void setupGrid(int rows,int cols){
-
+    /*
+    public Button[][] setupGrid(int rows,int cols){
+        TableLayout table;
         for(int i = 0; i < numCols; i++){
+            TableRow tableRow = new TableRow(this);
             for(int j = 0; j < numRows; j++){
-                grid[i][j] = 0;
+
             }
         }
-    }
+    }*/
 
 }

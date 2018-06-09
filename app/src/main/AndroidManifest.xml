@@ -23,7 +23,6 @@
             android:name=".WelcomeActivity"
             android:configChanges="keyboard|orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,6 +31,18 @@
         </activity>
         <activity
             android:name=".MainMenuActivity"
+            android:configChanges="keyboard|orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity
+            android:name=".GameActivity"
+            android:configChanges="keyboard|orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity
+            android:name=".OptionsActivity"
             android:configChanges="keyboard|orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape">
         </activity>

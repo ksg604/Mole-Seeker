@@ -20,6 +20,7 @@ public class Game {
     private Game(){
         //Private constructor so no one else can instantiate an instance of Game except us.
     }
+
     public static Game getInstance(){
         if (instance == null){
             instance = new Game();
@@ -31,15 +32,37 @@ public class Game {
     /*
        Normal object support
      */
-    public int getNumMoles(){
-        return numMoles;
+    public void setNumCols(int cols) {
+        if(cols < 0){
+            throw new IllegalArgumentException("Number of columns cannot be negative.");
+        }
+        numCols = cols;
     }
     public int getNumCols(){
         return numCols;
     }
+
+    public void setNumRows(int rows) {
+        if(rows < 0){
+            throw new IllegalArgumentException("Number of rows cannot be negative.");
+        }
+        numRows = rows;
+    }
     public int getNumRows(){
         return numRows;
     }
+
+    public void setNumMoles(int moles){
+        if(moles < 0){
+            throw new IllegalArgumentException("Number of moles cannot be negative.");
+        }
+        numMoles = moles;
+    }
+
+    public int getNumMoles(){
+        return numMoles;
+    }
+
     public int getScansUsed(){
         return scansUsed;
     }

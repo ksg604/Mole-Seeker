@@ -1,12 +1,16 @@
 package com.example.kevin.moleseeker.model;
 
 
+import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
+import com.example.kevin.moleseeker.R;
 
-public class Game {
+
+public class Game extends AppCompatActivity{
 
     private int numRows;
     private int numCols;

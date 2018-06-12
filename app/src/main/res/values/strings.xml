@@ -15,4 +15,18 @@
     <string name="found_x_of_y_moles">Found x of y moles</string>
     <string name="scans_used"># Scans used:</string>
     <string name="times_played">Times Played:</string>
+
+    <string-array name="board_sizes">
+        <item>4x6</item>
+        <item>5x10</item>
+        <item>6x15</item>
+    </string-array>
+
+    <string-array name="num_moles">
+        <item>6</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+    </string-array>
+
 </resources>

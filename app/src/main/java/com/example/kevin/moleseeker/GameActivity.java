@@ -26,7 +26,6 @@ public class GameActivity extends AppCompatActivity {
     public void setupGameGrid(){
         TableLayout buttonTable = findViewById(R.id.tableForButtons);
 
-
         for(int i = 0; i < game.getNumRows(); i++){
             TableRow tableRow = new TableRow(this);
             tableRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,TableLayout.LayoutParams.MATCH_PARENT,1.0f));

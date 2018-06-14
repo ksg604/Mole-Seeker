@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
     tools:context=".MainMenuActivity">
 
     <TextView
@@ -21,7 +22,7 @@
     <Button
         android:id="@+id/playGameBtn"
         style="@android:style/Widget.Material.Light.Button.Inset"
-        android:layout_width="212dp"
+        android:layout_width="240dp"
         android:layout_height="64dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="72dp"
@@ -39,7 +40,7 @@
     <Button
         android:id="@+id/optionsBtn"
         style="@android:style/Widget.Material.Light.Button.Inset"
-        android:layout_width="212dp"
+        android:layout_width="240dp"
         android:layout_height="64dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="72dp"
@@ -57,7 +58,7 @@
     <Button
         android:id="@+id/helpBtn"
         style="@android:style/Widget.Material.Light.Button.Inset"
-        android:layout_width="212dp"
+        android:layout_width="240dp"
         android:layout_height="64dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="11dp"
@@ -69,4 +70,15 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsBtn" />
+
+    <ImageView
+        android:id="@+id/moleIconMainMenu"
+        android:layout_width="325dp"
+        android:layout_height="294dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        tools:ignore = "contentDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainMenuTitle"
+        app:srcCompat="@drawable/moleicon" />
 </android.support.constraint.ConstraintLayout>

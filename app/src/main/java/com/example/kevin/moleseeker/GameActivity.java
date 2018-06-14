@@ -8,6 +8,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.media.MediaPlayer;
 import android.os.Vibrator;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -160,6 +161,10 @@ public class GameActivity extends AppCompatActivity {
         String getMolesFoundString = Integer.toString(game.getMolesFound());
         String totalMolesString = Integer.toString(game.getNumMoles());
         molesText.setText("Found "+getMolesFoundString+" of "+ totalMolesString + " moles.");
+
+        TextView timesPlayedText = findViewById(R.id.timesPlayedTxt);
+        String timesPlayedNumString = Integer.toString(game.getTimesPlayed());
+        timesPlayedText.setText("Times Played: "+timesPlayedNumString);
     }
 
     private void moleDiscovered(int row, int col){
@@ -242,6 +247,11 @@ public class GameActivity extends AppCompatActivity {
 
     private void checkIfFinished(){
         if(game.getNumMoles() == game.getMolesFound()){
+            game.incTimesPlayed();
+            TextView timesPlayed = findViewById(R.id.timesPlayedTxt);
+            String timesPlayedNumString = Integer.toString(game.getTimesPlayed());
+            timesPlayed.setText("Times Played: "+timesPlayedNumString);
+
             FragmentManager manager = getSupportFragmentManager();
             DialogFragment dialog = new DialogFragment();
             dialog.show(manager, "MessageDialog");

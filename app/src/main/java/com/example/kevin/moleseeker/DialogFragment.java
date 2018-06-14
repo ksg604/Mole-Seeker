@@ -28,8 +28,9 @@ public class DialogFragment extends AppCompatDialogFragment {
                 }
             }
         };
+
         setCancelable(false);
-        return new AlertDialog.Builder(getActivity(), android.R.style.ThemeOverlay_Material_Dialog_Alert)
+        return new AlertDialog.Builder(getActivity(), android.R.style.Theme_DeviceDefault_Light_Dialog_Alert)
                 .setView(v)
                 .setTitle("Game Over")
                 .setMessage("Congratulations! You have found all the moles!")

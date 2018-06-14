@@ -2,6 +2,8 @@ package com.example.kevin.moleseeker;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Path;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -57,6 +59,7 @@ public class OptionsActivity extends AppCompatActivity{
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
+
                 saveSelection(position);
 
                 Toast.makeText(getBaseContext(),"Board size set to "+parent.getItemAtPosition(position)+".",Toast.LENGTH_LONG)
@@ -99,6 +102,7 @@ public class OptionsActivity extends AppCompatActivity{
         numMolesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 Toast.makeText(getBaseContext(),"Number of moles set to "+parent.getItemAtPosition(position)+".",Toast.LENGTH_LONG)
                         .show();
                 saveSelection(position);

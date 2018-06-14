@@ -17,7 +17,7 @@ public class Game extends AppCompatActivity{
     private int numCols = 6;
     private int numMoles = 6;
     private int scansUsed;
-    private int timesPlayed;
+    private int timesPlayed = 0;
     private int molesFound;
 
     /*Singleton model support
@@ -44,6 +44,9 @@ public class Game extends AppCompatActivity{
     }
     public int getTimesPlayed(){
         return timesPlayed;
+    }
+    public void incTimesPlayed(){
+        timesPlayed++;
     }
     public void setNumCols(int cols) {
         if(cols < 0){

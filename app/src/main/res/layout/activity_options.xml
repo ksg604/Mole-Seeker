@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_dark"
+    android:background="@mipmap/main_menu__curr_foreground"
     tools:context=".OptionsActivity">
 
     <TextView
@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="40dp"
+        android:fontFamily="monospace"
         android:text="@string/settings"
+        android:textColor="#8B4513"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,11 +36,11 @@
         android:id="@+id/spinnerNumMoles"
         android:layout_width="299dp"
         android:layout_height="43dp"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="48dp"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/numMolesTxt"
         app:layout_constraintTop_toBottomOf="@+id/spinnerBoardSize" />
 
     <TextView
@@ -47,21 +49,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
+        android:fontFamily="monospace"
         android:text="@string/board_size"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="#8B4513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settingsTxt" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/numMolesTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
+        android:fontFamily="monospace"
         android:text="@string/number_of_moles"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="#8B4513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boardSizeTxt" />
 

@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="74" />
+                                                <entry key="scalingPercent" value="164" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,8 +33,11 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundImage" value="C:\Users\Kevin\Pictures\moleicon.png" />
-                                      <entry key="outputName" value="mole_icon" />
+                                      <entry key="backgroundImage" value="C:\Users\Kevin\Documents\moleSeekerBackground4.jpg" />
+                                      <entry key="backgroundLayerName" value="mole_seeker_background" />
+                                      <entry key="foregroundImage" value="C:\Users\Kevin\Documents\moleSeekerBackground4.jpg" />
+                                      <entry key="foregroundLayerName" value="mole_seeker_background_foreground" />
+                                      <entry key="outputName" value="mole_seeker_bg" />
                                     </map>
                                   </option>
                                 </PersistentState>

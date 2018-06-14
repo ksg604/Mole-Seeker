@@ -20,11 +20,11 @@
     <string name="erase_times_played">Erase times played</string>
 
 
-    <string name="help_txt">> In Mole Seeker, your objective is to find all the moles hidden in the field.\n\n> Clicking on a tile will trigger a scan; if that tile doesn\'t happen to have a mole hiding underneath it, the number of moles hiding in the area of the same column and row as that tile will be displayed on that tile.\n\n> Your goal is to find all the moles using the least number of scans!!!</string>
+    <string name="help_txt">> In Mole Seeker, your objective is to find all the moles hidden in the field.\n\n> Clicking on a cell will trigger a scan; if that cell doesn\'t happen to have a mole hiding underneath it, the number of moles hiding in the area of the same column and row as that tile will be displayed on that tile.\n\n> Your goal is to find all the moles using the least number of scans!!!</string>
     <string name="help_title"><u>Help</u></string>
     <string name="back">BACK</string>
     <string name ="about_the_author_title">ABOUT THE AUTHOR</string>
-    <string name="about_author_txt">Kevin San Gabriel is a newbie 3rd year undergraduate developer at Simon Fraser University.  Mole Seeker is his first game ever developed.  This game was developed by him with courtesy to Dr. Brian Fraser at Simon Fraser University.\n\nReferences: \n\n Koenig, M. (2015). Free Sound Effects | SoundBible.com. [online] Soundbible.com. Available at: http://soundbible.com/ [Accessed 11 June 2018].\nSan Gabriel, Kevin (2018), moleicon.png</string>
+    <string name="about_author_txt">Kevin San Gabriel is a 3rd year undergraduate software developer at Simon Fraser University.  Mole Seeker is his first game ever developed.  This game was developed by him with courtesy to Dr. Brian Fraser at Simon Fraser University.\n\nReferences: \n\n Koenig, M. (2015). Free Sound Effects | SoundBible.com. [online] Soundbible.com. Available at: http://soundbible.com/ [Accessed 11 June 2018].\nFraser, B. (2018). CMPT 276 Image Resources. Available at: http://www.cs.sfu.ca/CourseCentral/276/bfraser/solutions/images/ImageGallery/index.html [Accessed 14 June 2018].\nSan Gabriel, Kevin (2018), moleicon.png</string>
 
     <string-array name="board_sizes">
         <item>4x6</item>

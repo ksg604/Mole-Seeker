@@ -43,6 +43,7 @@ public class GameActivity extends AppCompatActivity {
         setupGameGrid();
     }
 
+    //Sets up the entire field.  Creates a matrix of buttons(cells).
     private void setupGameGrid(){
         TableLayout buttonTable = findViewById(R.id.tableForButtons);
 
@@ -78,7 +79,7 @@ public class GameActivity extends AppCompatActivity {
 
                             Vibrator vibrator = (Vibrator) GameActivity.this.getSystemService(Context.VIBRATOR_SERVICE);
                             if (vibrator != null && vibrator.hasVibrator()) {
-                                vibrator.vibrate(100);
+                                vibrator.vibrate(50);
                             }
 
                             game.useScan();
@@ -152,6 +153,7 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
+    //Initialize textView fields.
     private void setupInitialTextViews(){
         TextView scansText = findViewById(R.id.scansUsedTxt);
         String scansUsedStrings = Integer.toString(game.getScansUsed());
@@ -167,6 +169,7 @@ public class GameActivity extends AppCompatActivity {
         timesPlayedText.setText("Times Played: "+timesPlayedNumString);
     }
 
+    //Case where the player has found a hidden mole.
     private void moleDiscovered(int row, int col){
         MediaPlayer moleFoundSound;
         moleFoundSound = MediaPlayer.create(GameActivity.this,R.raw.found_mole_sound_4);
@@ -182,7 +185,7 @@ public class GameActivity extends AppCompatActivity {
 
         Vibrator vibrator = (Vibrator) this.getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
         if (vibrator != null && vibrator.hasVibrator()) {
-            vibrator.vibrate(1000);
+            vibrator.vibrate(250);
         }
 
         Button button = buttons[row][col];
@@ -225,7 +228,8 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
-    private void setIsMole(){
+    //Hide moles under random cells in the field.
+    private void hideMoles(){
         Random random = new Random();
         int randomRow = random.nextInt(boardRows);
         int randomCol = random.nextInt(boardCols);
@@ -237,14 +241,16 @@ public class GameActivity extends AppCompatActivity {
         isMole[randomRow][randomCol] = true;
     }
 
+    //With regards to the total number of moles instantiated by Singleton model, populate the field.
     private void populateWithMoles(){
         int i = 0;
         while(i < totalMoles){
-            setIsMole();
+            hideMoles();
             i++;
         }
     }
 
+    //Check if the number of moles found by the player is equal to the number of moles that have populated the field.
     private void checkIfFinished(){
         if(game.getNumMoles() == game.getMolesFound()){
             game.incTimesPlayed();
@@ -257,6 +263,4 @@ public class GameActivity extends AppCompatActivity {
             dialog.show(manager, "MessageDialog");
         }
     }
-
-
 }

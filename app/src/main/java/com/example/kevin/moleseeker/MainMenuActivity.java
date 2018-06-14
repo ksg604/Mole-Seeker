@@ -8,6 +8,8 @@ import android.widget.Button;
 
 import com.example.kevin.moleseeker.model.Game;
 
+import static java.lang.System.exit;
+
 public class MainMenuActivity extends AppCompatActivity {
 
     private Game game;
@@ -40,5 +42,11 @@ public class MainMenuActivity extends AppCompatActivity {
                 startActivity(playGameIntent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
     }
 }

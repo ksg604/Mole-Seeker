@@ -22,7 +22,7 @@
         android:id="@+id/spinnerBoardSize"
         android:layout_width="299dp"
         android:layout_height="43dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="160dp"
         android:layout_marginTop="44dp"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
@@ -33,8 +33,8 @@
         android:id="@+id/spinnerNumMoles"
         android:layout_width="299dp"
         android:layout_height="43dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="48dp"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
         app:layout_constraintStart_toEndOf="@+id/textView3"
@@ -56,12 +56,23 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/mines"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/number_of_moles"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boardSizeTxt" />
+
+    <Button
+        android:id="@+id/eraseTimesPlayedBtn"
+        style="@android:style/Widget.Material.Light.Button.Inset"
+        android:layout_width="290dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/erase_times_played"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -57,5 +57,14 @@
 
     </TableLayout>
 
+    <View
+        android:id="@+id/scanBar"
+        android:layout_height="1dp"
+        android:layout_width="1dp"
+        android:visibility="gone"
+        android:background="@android:color/black"
+       />
+
+
 
 </android.support.constraint.ConstraintLayout>

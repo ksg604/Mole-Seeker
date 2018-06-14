@@ -10,11 +10,14 @@
     <string name="moleImg1">moleImg1</string>
     <string name="moleImg3">moleImg3</string>
     <string name="board_size">Board Size:</string>
-    <string name="mines"># Mines:</string>
+    <string name="moles"># Moles:</string>
     <string name="settings">Settings</string>
     <string name="found_x_of_y_moles">Found x of y moles</string>
     <string name="scans_used"># Scans used:</string>
     <string name="times_played">Times Played:</string>
+    <string name="number_of_moles">Number of moles:</string>
+    <string name="button">Button</string>
+    <string name="erase_times_played">Erase times played</string>
 
     <string-array name="board_sizes">
         <item>4x6</item>
@@ -28,5 +31,6 @@
         <item>15</item>
         <item>20</item>
     </string-array>
+
 
 </resources>

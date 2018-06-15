@@ -32,6 +32,8 @@ public class OptionsActivity extends AppCompatActivity{
         game = Game.getInstance();
 
         setupEraseTimesPlayedBtn();
+        setupClearAllHighScoresBtn();
+        setupBackBtn();
         setupSpinners();
         getSelection();
     }
@@ -44,6 +46,30 @@ public class OptionsActivity extends AppCompatActivity{
                 game.setTimesPlayed(0);
                 Toast.makeText(getBaseContext(),"Number of times played reset to 0.",Toast.LENGTH_LONG)
                         .show();
+            }
+        });
+    }
+
+    private void setupClearAllHighScoresBtn(){
+        Button clearHighScoresBtn = findViewById(R.id.clearHighScoresBtn);
+        clearHighScoresBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i = 0; i < 12; i++){
+                    game.setHighScore(9999,i);
+                }
+                Toast.makeText(getBaseContext(),"All high scores cleared.",Toast.LENGTH_LONG)
+                        .show();
+            }
+        });
+    }
+
+    private void setupBackBtn(){
+        Button backBtn = findViewById(R.id.backBtnOptions);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OptionsActivity.this.finish();
             }
         });
     }
@@ -156,7 +182,7 @@ public class OptionsActivity extends AppCompatActivity{
             boardSizeSpinner.setSelection(boardSizeSpinnerValue);
         }
         int numMolesSpinnerValue = prefs.getInt("Num Moles", -1);
-        if(numMolesSpinnerValue != 0-1){
+        if(numMolesSpinnerValue != -1){
             numMolesSpinner.setSelection(numMolesSpinnerValue);
         }
     }

@@ -555,7 +555,6 @@ public class GameActivity extends AppCompatActivity {
         int timesPlayed = prefs.getInt("Times played",-1);
         int highScoreIndex = prefs.getInt("highScoreIndex",-1);
 
-
         if(timesPlayed != -1){
             game.setTimesPlayed(timesPlayed);
         }

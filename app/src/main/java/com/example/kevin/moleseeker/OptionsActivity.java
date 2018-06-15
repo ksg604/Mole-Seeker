@@ -2,6 +2,8 @@ package com.example.kevin.moleseeker;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Path;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,14 +31,26 @@ public class OptionsActivity extends AppCompatActivity{
         setContentView(R.layout.activity_options);
         game = Game.getInstance();
 
-
+        setupEraseTimesPlayedBtn();
         setupSpinners();
         getSelection();
     }
 
+    private void setupEraseTimesPlayedBtn(){
+        Button eraseTimesPlayed = findViewById(R.id.eraseTimesPlayedBtn);
+        eraseTimesPlayed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                game.setTimesPlayed(0);
+                Toast.makeText(getBaseContext(),"Number of times played reset to 0.",Toast.LENGTH_LONG)
+                        .show();
+            }
+        });
+    }
+
 
     private void setupSpinners(){
-        boardSizeSpinner = (Spinner)findViewById(R.id.spinnerBoardSize);
+        boardSizeSpinner = findViewById(R.id.spinnerBoardSize);
         adapter = ArrayAdapter.createFromResource(this,R.array.board_sizes,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         boardSizeSpinner.setAdapter(adapter);
@@ -44,6 +58,7 @@ public class OptionsActivity extends AppCompatActivity{
         boardSizeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
 
                 saveSelection(position);
 
@@ -79,7 +94,7 @@ public class OptionsActivity extends AppCompatActivity{
             }
         });
 
-        numMolesSpinner = (Spinner) findViewById(R.id.spinnerNumMoles);
+        numMolesSpinner = findViewById(R.id.spinnerNumMoles);
         adapter2 = ArrayAdapter.createFromResource(this,R.array.num_moles,android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         numMolesSpinner.setAdapter(adapter2);
@@ -87,6 +102,7 @@ public class OptionsActivity extends AppCompatActivity{
         numMolesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 Toast.makeText(getBaseContext(),"Number of moles set to "+parent.getItemAtPosition(position)+".",Toast.LENGTH_LONG)
                         .show();
                 saveSelection(position);
@@ -140,23 +156,9 @@ public class OptionsActivity extends AppCompatActivity{
             boardSizeSpinner.setSelection(boardSizeSpinnerValue);
         }
         int numMolesSpinnerValue = prefs.getInt("Num Moles", -1);
-        if(numMolesSpinnerValue != -1){
+        if(numMolesSpinnerValue != 0-1){
             numMolesSpinner.setSelection(numMolesSpinnerValue);
         }
     }
 
-    /*
-    private void setupGameGrid(int rows, int cols){
-        TableLayout table = findViewById(R.id.tableForButtons);
-
-        for(int i = 0; i < rows; i++){
-            TableRow tableRow = new TableRow(this);
-            tableRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,TableLayout.LayoutParams.MATCH_PARENT,1.0f));
-            table.addView(tableRow);
-            for(int j = 0; j < cols; j++){
-                Button button = new Button(this);
-                tableRow.addView(button);
-            }
-        }
-    }*/
 }

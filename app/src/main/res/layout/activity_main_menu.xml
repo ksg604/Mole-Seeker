@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/main_menu__curr_foreground"
     tools:context=".MainMenuActivity">
 
     <TextView
@@ -12,8 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/main_menu"
-        android:textSize="30sp"
-        app:fontFamily="serif"
+        android:textColor="#8B4513"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +24,7 @@
     <Button
         android:id="@+id/playGameBtn"
         style="@android:style/Widget.Material.Light.Button.Inset"
-        android:layout_width="212dp"
+        android:layout_width="240dp"
         android:layout_height="64dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="72dp"
@@ -39,7 +42,7 @@
     <Button
         android:id="@+id/optionsBtn"
         style="@android:style/Widget.Material.Light.Button.Inset"
-        android:layout_width="212dp"
+        android:layout_width="240dp"
         android:layout_height="64dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="72dp"
@@ -50,6 +53,7 @@
         android:paddingTop="20dp"
         android:text="@string/options"
         android:textSize="18sp"
+
         app:layout_constraintBottom_toTopOf="@+id/helpBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playGameBtn" />
@@ -57,7 +61,7 @@
     <Button
         android:id="@+id/helpBtn"
         style="@android:style/Widget.Material.Light.Button.Inset"
-        android:layout_width="212dp"
+        android:layout_width="240dp"
         android:layout_height="64dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="11dp"
@@ -67,6 +71,18 @@
         android:paddingTop="20dp"
         android:text="@string/help"
         android:textSize="18sp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsBtn" />
+
+    <ImageView
+        android:id="@+id/moleIconMainMenu"
+        android:layout_width="325dp"
+        android:layout_height="294dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        tools:ignore = "contentDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainMenuTitle"
+        app:srcCompat="@drawable/moleicon" />
 </android.support.constraint.ConstraintLayout>

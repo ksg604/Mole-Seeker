@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/main_menu__curr_foreground"
+
     tools:context=".WelcomeActivity">
 
     <ImageView
@@ -53,7 +55,8 @@
         android:text="@string/by_kevin_san_gabriel"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:fontFamily="casual"
+        android:textColor="#8B4513"
+        app:fontFamily="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -65,18 +68,20 @@
         android:text="@string/mole_seeker"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:fontFamily="casual"
+        android:textColor="#8B4513"
+        app:fontFamily="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/skipBtn"
+        style="@android:style/Widget.Material.Light.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
 
+        android:layout_marginEnd="16dp"
         android:text="@string/skip"
         android:textSize="18sp"
         android:textStyle="bold"

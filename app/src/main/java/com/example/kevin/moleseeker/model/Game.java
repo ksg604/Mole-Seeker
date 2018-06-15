@@ -12,10 +12,13 @@ import com.example.kevin.moleseeker.R;
 
 public class Game extends AppCompatActivity{
 
-    private int numRows;
-    private int numCols;
-    private int numMoles;
+    //By default, board size is 4x6 and number of moles is 6.
+    private int numRows = 4;
+    private int numCols = 6;
+    private int numMoles = 6;
     private int scansUsed;
+    private int timesPlayed = 0;
+    private int molesFound;
 
     /*Singleton model support
      * allows same game object to be shared between two activities
@@ -36,6 +39,15 @@ public class Game extends AppCompatActivity{
     /*
        Normal object support
      */
+    public void setTimesPlayed(int times){
+        timesPlayed = times;
+    }
+    public int getTimesPlayed(){
+        return timesPlayed;
+    }
+    public void incTimesPlayed(){
+        timesPlayed++;
+    }
     public void setNumCols(int cols) {
         if(cols < 0){
             throw new IllegalArgumentException("Number of columns cannot be negative.");
@@ -63,29 +75,33 @@ public class Game extends AppCompatActivity{
         numMoles = moles;
     }
 
+    //Total moles
     public int getNumMoles(){
         return numMoles;
+    }
+
+    public void setMolesFound(int moles){
+        molesFound = moles;
+    }
+
+    public int getMolesFound(){
+        return molesFound;
+    }
+
+    public void foundMole(){
+        molesFound++;
     }
 
     public int getScansUsed(){
         return scansUsed;
     }
+    public void setScansUsed(int scans){
+        scansUsed = scans;
+    }
     public void useScan(){
         scansUsed++;
     }
-    public void moleFound(){
-        numMoles--;
-    }
 
-    /*
-    public Button[][] setupGrid(int rows,int cols){
-        TableLayout table;
-        for(int i = 0; i < numCols; i++){
-            TableRow tableRow = new TableRow(this);
-            for(int j = 0; j < numRows; j++){
 
-            }
-        }
-    }*/
 
 }

@@ -3,6 +3,7 @@ package com.example.kevin.moleseeker;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,6 +18,12 @@ public class AboutAuthorActivity extends AppCompatActivity {
         setupBackBtn();
         TextView aboutAuthorText = findViewById(R.id.aboutAuthorTxt);
         aboutAuthorText.setText(getResources().getString(R.string.about_author_txt));
+
+
+        TextView hyperLink = findViewById(R.id.hyperlink);
+        hyperLink.setText(R.string.hyperlinkString);
+        hyperLink.setMovementMethod(LinkMovementMethod.getInstance());
+
     }
 
     private void setupBackBtn(){

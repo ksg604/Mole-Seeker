@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/aboutAuthorTxt"
         android:layout_width="661dp"
-        android:layout_height="274dp"
+        android:layout_height="82dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="monospace"
@@ -41,4 +41,31 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hyperlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="@string/hyperlinkString"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutAuthorTxt" />
+
+    <TextView
+        android:id="@+id/referencesTxt"
+        android:layout_width="663dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="@string/references"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hyperlink"
+        app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>

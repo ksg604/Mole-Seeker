@@ -16,9 +16,12 @@ public class Game extends AppCompatActivity{
     private int numRows = 4;
     private int numCols = 6;
     private int numMoles = 6;
-    private int scansUsed;
+    private int scansUsed = 0;
     private int timesPlayed = 0;
-    private int molesFound;
+    private int molesFound = 0;
+
+    //12 cases for high scores because there are 12 possible game configurations.
+    private int[] highScore = {9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,9999,9999};
 
     /*Singleton model support
      * allows same game object to be shared between two activities
@@ -39,6 +42,13 @@ public class Game extends AppCompatActivity{
     /*
        Normal object support
      */
+    public void setHighScore(int score, int index ){
+        highScore[index] =score;
+    }
+    public int getHighScore(int index){
+        return highScore[index];
+    }
+
     public void setTimesPlayed(int times){
         timesPlayed = times;
     }

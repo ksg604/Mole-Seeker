@@ -18,6 +18,7 @@ android {
     }
     productFlavors {
     }
+    namespace 'com.example.kevin.moleseeker'
 }
 
 dependencies {

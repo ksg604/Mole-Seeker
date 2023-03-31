@@ -22,7 +22,7 @@ git clone https://github.com/ksg604/mole-seeker.git
 
 4. Open the device manager on the right hand side of Android Studio
 
-![open](./readme_images/device_manager)
+![open](./readme_images/device_manager.png)
 
 5. Choose one of the emulator devices to run the app by clicking the play button next to one of them
 
@@ -32,6 +32,6 @@ The app should run on the virtual device you have running.
 
 If you don't want to use an emulator, you can plug in a physical Android device to test Mole Seeker out.  If you are doing this, ensure USB debugging is enabled on your device.  Then, plug your device in while Android studio has the Mole Seeker project opened.  Ensure your device is selected to run the app and then choose Run -> Run app.
 
-![open](./readme_images/device_manager)
+![open](./readme_images/personal_device.png)
 
 Mole Seeker should then be installed and run automatically on your device
